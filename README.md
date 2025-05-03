@@ -28,7 +28,7 @@
    The application compares the user’s flowchart with the correct solution and provides feedback along with an accuracy score.
 
 7. **Correct Solution Display **  
-   A **"Show Correct Solution"** button may be used to display the correct flowchart.
+   A "Show Correct Solution" button may be used to display the correct flowchart.
 
 ---
 
@@ -84,7 +84,7 @@ npm install react react-dom next reactflow framer-motion uuid howler canvas-conf
    npm run dev
    ```
 
-Repeat these steps for `queryflowchartgame` if applicable.
+Repeat these steps for `queryflowchartgame` 
 
 ---
 
