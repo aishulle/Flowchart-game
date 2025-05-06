@@ -24,7 +24,7 @@ const questions: Question[] = [
   },
 ];
 
-export default function Home() {
+export default function DragDropPage() {
   const [selectedQuestion, setSelectedQuestion] = useState<Question | null>(null);
 
   return (
@@ -39,8 +39,11 @@ export default function Home() {
       </header>
 
       {!selectedQuestion ? (
-        <div className="flex flex-col items-center justify-center min-h-[calc(100vh-64px)] p-6 text-center">
-          <h1 className="text-2xl font-bold mb-2 text-white">Choose a Flowchart Challenge</h1>
+        <section
+          className="flex flex-col items-center justify-center min-h-[calc(100vh-64px)] p-6 text-center"
+          role="main"
+        >
+          <h1 className="text-2xl font-bold mb-2">Choose a Flowchart Challenge</h1>
           <p className="text-sm text-white/80 mb-6 max-w-xl">
             Drag components from the canvas and connect them to build the correct workflow.
             Submit your flow to get feedback. Use "Show Solution" if you're stuck!
@@ -58,11 +61,21 @@ export default function Home() {
               </div>
             ))}
           </div>
-        </div>
+        </section>
       ) : selectedQuestion.id === 1 ? (
         <FlowchartGame question={selectedQuestion} onBack={() => setSelectedQuestion(null)} />
-      ) : (
+      ) : selectedQuestion.id === 2 ? (
         <Queryflowchart question={selectedQuestion} onBack={() => setSelectedQuestion(null)} />
+      ) : (
+        <div className="flex flex-col items-center justify-center min-h-screen p-10 text-center">
+          <h2 className="text-xl font-bold mb-2">Unknown Question</h2>
+          <button
+            onClick={() => setSelectedQuestion(null)}
+            className="mt-4 px-4 py-2 bg-white text-purple-900 rounded-lg shadow hover:bg-gray-100"
+          >
+            Go Back
+          </button>
+        </div>
       )}
     </main>
   );
