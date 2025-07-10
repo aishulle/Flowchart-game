@@ -45,20 +45,6 @@
 
 ---
 
-## Dependencies
-
-The following dependencies are used in this project:
-
-| Package             | Purpose                                       |
-|---------------------|-----------------------------------------------|
-| `next`              | React framework for server-side rendering     |
-| `react`, `react-dom`| Core React library and DOM rendering          |
-| `reactflow`         | Visualizing and editing flowcharts            |
-| `framer-motion`     | Adding UI animations                          |
-| `uuid`              | Generating unique component IDs               |
-| `howler`            | Managing audio and sound feedback             |
-| `canvas-confetti`   | Displaying confetti effects for feedback      |
-
 ### Installation
 
 Install dependencies by running the following command in both `flowchartgame` and `queryflowchartgame` directories:
